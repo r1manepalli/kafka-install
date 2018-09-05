@@ -22,7 +22,6 @@ mkdir -p /var/log/zookeeper
 mkdir -p /etc/kafka
 mkdir -p /etc/zookeeper
 cp $KAFKA_FILE/config/server.properties /etc/kafka/
-cp $KAFKA_FILE/config/log4j.properties /etc/kafka/
 cp $KAFKA_FILE/config/zookeeper.properties /etc/zookeeper/
 rm -rf $KAFKA_FILE
 rm $KAFKA_FILE.tgz
