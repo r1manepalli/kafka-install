@@ -1,0 +1,18 @@
+[Unit]
+Description=Apache Kafka server (broker)
+Documentation=http://kafka.apache.org/documentation.html
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target zookeeper-server.service
+
+[Service]
+Environment="KAFKA_LOG4J_OPTS=-Dlog4j.configuration=/etc/kafka/log4j.properties"
+Environment="KAFKA_HEAP_OPTS=-Xms1g -Xmx1g"
+Type=simple
+User=kafka
+Group=kafka
+ExecStart=/opt/kafka/bin/kafka-server-start.sh /etc/kafka/server.properties
+ExecStop=/opt/kafka/bin/kafka-server-stop.sh
+SyslogIdentifier=kafka
+
+[Install]
+WantedBy=multi-user.target
