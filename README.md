@@ -13,5 +13,9 @@ You will want to modify the following config files.
   * /etc/kafka/server.properties
     ```
     broker.id=[broker number here]
-    log.dirs=/var/log/kafka
+    log.dirs=/kafka
+    ```
+  * /etc/zookeeper/zookeeper.properties
+    ```
+    dataDir=/zookeeper
     ```
