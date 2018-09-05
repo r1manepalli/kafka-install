@@ -6,6 +6,7 @@ Requires=network.target remote-fs.target
 After=network.target remote-fs.target
 
 [Service]
+Environment="LOG_DIR=/var/log/zookeeper"
 Type=simple
 User=zookeeper
 Group=kafka
