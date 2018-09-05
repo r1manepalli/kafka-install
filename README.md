@@ -19,3 +19,4 @@ You will want to modify the following config files.
     ```
     dataDir=/zookeeper
     ```
+  * add /opt/kafka/bin to your PATH
