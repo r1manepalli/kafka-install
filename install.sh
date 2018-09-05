@@ -21,6 +21,10 @@ mkdir -p /var/log/kafka
 mkdir -p /var/log/zookeeper
 mkdir -p /etc/kafka
 mkdir -p /etc/zookeeper
+mkdir -p /zookeeper
+chown -R zookeeper:kafka /zookeeper
+mkdir -p /kafka
+chown -R kafka:kafka /kafka
 cp $KAFKA_FILE/config/server.properties /etc/kafka/
 cp $KAFKA_FILE/config/zookeeper.properties /etc/zookeeper/
 rm -rf $KAFKA_FILE
